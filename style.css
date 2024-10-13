@@ -1,1 +1,100 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative; /* Positioning for the YouTube link */
+}
+
+.base {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.base div {
+    display: flex;
+}
+
+.char {
+    font-size: 40px;
+    animation: slide 1.4s var(--d) linear infinite;
+}
+
+.bar {
+    height: 10px;
+    width: 20px;
+    background-color: brown;
+    position: absolute;
+    left: 0px;
+    top: calc(50% + 10px);
+    animation: slideBar 1.4s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0px);
+    }
+    15% {
+        transform: translateY(-15px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideBar {
+    to {
+        transform: translateX(180px);
+    }
+}
+
+/* CSS rules for YouTube link */
+.yt {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.yt > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 0.6em 1em;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
